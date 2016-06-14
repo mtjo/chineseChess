@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">中国象棋</string>
+    <string name="red">我 先 手</string>
+    <string name="black">电脑先手</string>
+    <string name="both">两 人 下</string>
+    <string name="start">开始</string>
+
+</resources>

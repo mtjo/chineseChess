@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/br.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/br.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ra.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/ra.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/bb.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/bb.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rk.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/rk.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/bc.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/bc.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rn.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/rn.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/selected2.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/selected2.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rb.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/rb.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/background.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/background.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/bp.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/bp.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/xqwlight.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/xqwlight.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/cursor2.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/cursor2.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rc.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/rc.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rr.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/rr.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/bk.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/bk.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/board.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/board.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/cursor.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/cursor.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/bn.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/bn.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/selected.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/selected.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ba.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/ba.png"
+    },
+    {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/rp.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/rp.png"
+    }
+]

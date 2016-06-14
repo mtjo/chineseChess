@@ -1,0 +1,72 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:2:1-39:12
+	package
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:3:5-39
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:7:5-43
+	android:targetSdkVersion
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:7:15-40
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
+android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:9:5-89
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:9:30-86
+android:uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:10:5-83
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:10:30-80
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:11:5-88
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:11:30-85
+application
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:13:5-37:19
+	android:label
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:15:9-41
+	android:icon
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:14:9-45
+	android:theme
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:16:9-67
+activity#com.jameschen.game.chess.ChessGame
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:17:9-25:20
+	android:screenOrientation
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:19:13-49
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:18:13-38
+activity#com.jameschen.game.chess.HitGameActivity
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:26:9-28:61
+	android:screenOrientation
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:28:13-49
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:27:13-44
+activity#com.jameschen.game.chess.SetActivity
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:29:9-36:20
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:29:19-46
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:30:13-34:29
+action#android.intent.action.MAIN
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:33:17-77
+	android:name
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:33:27-74
