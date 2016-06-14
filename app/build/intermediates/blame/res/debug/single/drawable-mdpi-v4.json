@@ -60,6 +60,10 @@
         "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/rr.png"
     },
     {
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/chessboard.png",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/chessboard.png"
+    },
+    {
         "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/bk.png",
         "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable-mdpi/bk.png"
     },

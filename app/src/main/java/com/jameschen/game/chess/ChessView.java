@@ -67,7 +67,7 @@ class ChessView extends View {
 	private boolean init = false;
 	private Bitmap imgBoard, imgSelected, imgSelected2, imgCursor, imgCursor2;
 	private Bitmap[] imgPieces = new Bitmap[24];
-	private int squareSize, width, height, left, right, top, bottom;
+	private int squareSize, width, height, left, right, top, bottom ;
 	private Context context;
 	private Paint paint = new Paint();
 
@@ -200,7 +200,7 @@ class ChessView extends View {
 
 		Bitmap mBitmap = Bitmap.createScaledBitmap(imgBoard, right - left + 32,
 				bottom - top + 32, false);
-		canvas.drawBitmap(mBitmap, left, 0, paint);
+		canvas.drawBitmap(mBitmap, left,top, paint);
 		for (int sq = 0; sq < 256; sq++) {
 			if (Position.IN_BOARD(sq)) {
 				int pc = pos.squares[sq];

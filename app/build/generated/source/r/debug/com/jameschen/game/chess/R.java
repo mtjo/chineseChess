@@ -24,21 +24,22 @@ public final class R {
         public static final int board=0x7f020006;
         public static final int bp=0x7f020007;
         public static final int br=0x7f020008;
-        public static final int cursor=0x7f020009;
-        public static final int cursor2=0x7f02000a;
-        public static final int filled_box=0x7f02000b;
-        public static final int hole_btn_color=0x7f02000c;
-        public static final int ic_launcher=0x7f02000d;
-        public static final int ra=0x7f02000e;
-        public static final int rb=0x7f02000f;
-        public static final int rc=0x7f020010;
-        public static final int rk=0x7f020011;
-        public static final int rn=0x7f020012;
-        public static final int rp=0x7f020013;
-        public static final int rr=0x7f020014;
-        public static final int selected=0x7f020015;
-        public static final int selected2=0x7f020016;
-        public static final int xqwlight=0x7f020017;
+        public static final int chessboard=0x7f020009;
+        public static final int cursor=0x7f02000a;
+        public static final int cursor2=0x7f02000b;
+        public static final int filled_box=0x7f02000c;
+        public static final int hole_btn_color=0x7f02000d;
+        public static final int ic_launcher=0x7f02000e;
+        public static final int ra=0x7f02000f;
+        public static final int rb=0x7f020010;
+        public static final int rc=0x7f020011;
+        public static final int rk=0x7f020012;
+        public static final int rn=0x7f020013;
+        public static final int rp=0x7f020014;
+        public static final int rr=0x7f020015;
+        public static final int selected=0x7f020016;
+        public static final int selected2=0x7f020017;
+        public static final int xqwlight=0x7f020018;
     }
     public static final class id {
         public static final int radio_black=0x7f080002;

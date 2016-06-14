@@ -1,19 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="f5d2d3c81528e6cd245a35e2fc3b968549b4a268">
-        <dex dex="/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_b1690813394f332f0531e9793fabbdb67e6443af.jar" />
-    </item>
-    <item
-        jar="/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="3565d374a614a5c6e8f769b006aeda049a7d98c8">
-        <dex dex="/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/pre-dexed/debug/instant-run_db1a25523a92d2b5dc844af0677d3b023514862a.jar" />
-    </item>
-
-</items>
+<items version="2" />
