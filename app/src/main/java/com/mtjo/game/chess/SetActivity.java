@@ -91,12 +91,10 @@ public class SetActivity extends Activity {
         bitmap=ScreenShot.takeScreenShot(SetActivity.this);
 
 
-        Bitmap bm = BitmapFactory.decodeFile("/sdcard/1.png");
-        Bitmap bm2 = BitmapFactory.decodeFile("/sdcard/2.png");
+        Bitmap bm = BitmapFactory.decodeFile("/sdcard/2.png");
+        Bitmap bm2 = BitmapFactory.decodeFile("/sdcard/1.png");
 
         ImageView imageView;
-        //imageView = (ImageView)findViewById(R.id.imageView);
-        //imageView.setImageBitmap(bitmap);
 
         /*try {
             Thread.currentThread().sleep(2000);//阻断2秒
@@ -104,11 +102,11 @@ public class SetActivity extends Activity {
             e.printStackTrace();
         }*/
         bitmap1=ScreenShot.takeScreenShot(SetActivity.this);
-        //String ret = PictureContrast.similarity(bitmap,bitmap1);
+        String ret = PictureContrast.similarity(bm,bm2);
         retbitmap = PictureContrast.bitmapMinus(bm,bm2);
-        //Log.i("ret", "testscreen: "+ret);
+        Log.i("ret", "testscreen: "+ret);
         imageView = (ImageView)findViewById(R.id.imageView);
-        imageView.setImageBitmap(bm2);
+        imageView.setImageBitmap(retbitmap);
 
     }
 

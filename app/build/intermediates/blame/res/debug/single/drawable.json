@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable/hole_btn_color.xml",
-        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable/hole_btn_color.xml"
+        "merged": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/res/merged/debug/drawable/hole_btn_color.xml",
+        "source": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/src/main/res/drawable/hole_btn_color.xml"
     },
     {
-        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/drawable/filled_box.xml",
-        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/drawable/filled_box.xml"
+        "merged": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/res/merged/debug/drawable/filled_box.xml",
+        "source": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/src/main/res/drawable/filled_box.xml"
     }
 ]
