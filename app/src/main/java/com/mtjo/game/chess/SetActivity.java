@@ -2,11 +2,21 @@ package com.mtjo.game.chess;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import com.mtjo.game.util.PictureContrast;
+import com.mtjo.game.util.ScreenShot;
+
 
 public class SetActivity extends Activity {
     public RadioGroup player,level;
@@ -74,4 +84,55 @@ public class SetActivity extends Activity {
             }
         }
     };
+
+    public void testscreen(View view) {
+        Bitmap bitmap, bitmap1 ,retbitmap ;
+
+        bitmap=ScreenShot.takeScreenShot(SetActivity.this);
+
+
+        Bitmap bm = BitmapFactory.decodeFile("/sdcard/1.png");
+        Bitmap bm2 = BitmapFactory.decodeFile("/sdcard/2.png");
+
+        ImageView imageView;
+        //imageView = (ImageView)findViewById(R.id.imageView);
+        //imageView.setImageBitmap(bitmap);
+
+        /*try {
+            Thread.currentThread().sleep(2000);//阻断2秒
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+        bitmap1=ScreenShot.takeScreenShot(SetActivity.this);
+        //String ret = PictureContrast.similarity(bitmap,bitmap1);
+        retbitmap = PictureContrast.bitmapMinus(bm,bm2);
+        //Log.i("ret", "testscreen: "+ret);
+        imageView = (ImageView)findViewById(R.id.imageView);
+        imageView.setImageBitmap(bm2);
+
+    }
+
+
+    private long exitTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            Bitmap bitmap ;
+            bitmap= null;
+            ImageView imageView;
+            imageView = (ImageView)findViewById(R.id.imageView);
+            imageView.setImageBitmap(bitmap);
+
+            if((System.currentTimeMillis()-exitTime) > 2000){
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

@@ -42,6 +42,7 @@ public final class R {
         public static final int xqwlight=0x7f020018;
     }
     public static final class id {
+        public static final int imageView=0x7f08000a;
         public static final int radio_level_amateur=0x7f080006;
         public static final int radio_level_beginner=0x7f080005;
         public static final int radio_level_expert=0x7f080007;
@@ -51,6 +52,7 @@ public final class R {
         public static final int radiogroup_level=0x7f080004;
         public static final int radiogroup_player=0x7f080000;
         public static final int start_button=0x7f080008;
+        public static final int test=0x7f080009;
     }
     public static final class layout {
         public static final int activity_set=0x7f030000;

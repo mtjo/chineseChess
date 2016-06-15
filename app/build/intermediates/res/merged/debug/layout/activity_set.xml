@@ -87,6 +87,22 @@
         android:layout_gravity="center_horizontal"
         android:onClick="newstart"
         android:text="@string/start" />
+    <Button
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_button"
+        android:layout_gravity="center_horizontal"
+        android:onClick="testscreen"
+        android:text="测试" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@id/test"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
