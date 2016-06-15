@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jameschen.game.chess"
+    package="com.mtjo.game.chess"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
-            android:name="com.jameschen.game.chess.ChessGame"
+            android:name="com.mtjo.game.chess.ChessGame"
             android:screenOrientation="portrait" >
 
             <!--
@@ -30,9 +30,9 @@
             -->
         </activity>
         <activity
-            android:name="com.jameschen.game.chess.HitGameActivity"
+            android:name="com.mtjo.game.chess.HitGameActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.jameschen.game.chess.SetActivity" >
+        <activity android:name="com.mtjo.game.chess.SetActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

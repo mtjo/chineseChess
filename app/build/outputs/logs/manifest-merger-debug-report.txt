@@ -2,7 +2,7 @@
 manifest
 ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:2:1-39:12
 	package
-		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:3:5-39
+		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:3:5-34
 		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
 		INJECTED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -44,19 +44,19 @@ ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xm
 		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:14:9-45
 	android:theme
 		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:16:9-67
-activity#com.jameschen.game.chess.ChessGame
+activity#com.mtjo.game.chess.ChessGame
 ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:17:9-25:20
 	android:screenOrientation
 		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:19:13-49
 	android:name
 		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:18:13-38
-activity#com.jameschen.game.chess.HitGameActivity
+activity#com.mtjo.game.chess.HitGameActivity
 ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:26:9-28:61
 	android:screenOrientation
 		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:28:13-49
 	android:name
 		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:27:13-44
-activity#com.jameschen.game.chess.SetActivity
+activity#com.mtjo.game.chess.SetActivity
 ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:29:9-36:20
 	android:name
 		ADDED from /home/mtjo/wbiao_android/chineseChess/app/src/main/AndroidManifest.xml:29:19-46

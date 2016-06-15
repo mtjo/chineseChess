@@ -4,8 +4,13 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="app_name">中国象棋</string>
     <string name="black">电脑先手</string>
-    <string name="both">两 人 下</string>
-    <string name="red">我 先 手</string>
+    <string name="both">对  战</string>
+    <string name="level_amateur">业  余</string>
+    <string name="level_beginner">初学者</string>
+    <string name="level_expert">专  业</string>
+    <string name="level_select">请选择难度等级</string>
+    <string name="player_select">请选择玩家</string>
+    <string name="red">我先手</string>
     <string name="start">开始</string>
     <style name="FullHeightDialog" parent="android:style/Theme.Dialog">
         <item name="android:windowNoTitle">true</item>

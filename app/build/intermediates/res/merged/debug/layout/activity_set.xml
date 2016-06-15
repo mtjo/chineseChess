@@ -7,49 +7,86 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.jameschen.game.chess.SetActivity">
+    android:padding="30dp"
+    tools:context="com.mtjo.game.chess.SetActivity">
     <RadioGroup
+        android:id="@+id/radiogroup_player"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/red_or_black">
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/red"
-        android:id="@+id/radio_red"
-        android:layout_marginTop="84dp"
-        android:checked="true"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="wrap_content">
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/black"
-        android:id="@+id/radio_black"
-        android:checked="false"
-        android:layout_gravity="center_horizontal" />
-
-
-    <RadioButton
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/both"
-            android:id="@+id/radio_both"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/player_select"
+            android:textSize="9pt" />
+
+        <RadioButton
+            android:id="@+id/radio_player_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/red" />
+
+        <RadioButton
+            android:id="@+id/radio_player_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:checked="false"
-            android:layout_gravity="center_horizontal" />
-        <Button
+            android:text="@string/black" />
+
+
+        <RadioButton
+            android:id="@+id/radio_player_both"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/start"
-            android:id="@+id/start_button"
-            android:onClick="newstart"
-            android:layout_gravity="center_horizontal" />
+            android:checked="false"
+            android:text="@string/both" />
+    </RadioGroup>
 
+    <RadioGroup
+        android:id="@+id/radiogroup_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroup_player">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level_select"
+            android:layout_gravity="center_horizontal"
+            android:textSize="9pt" />
+
+        <RadioButton
+            android:id="@+id/radio_level_beginner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/level_beginner" />
+
+        <RadioButton
+            android:id="@+id/radio_level_amateur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/level_amateur" />
+
+        <RadioButton
+            android:id="@+id/radio_level_expert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="@string/level_expert" />
 
     </RadioGroup>
 
-
-
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radiogroup_level"
+        android:layout_gravity="center_horizontal"
+        android:onClick="newstart"
+        android:text="@string/start" />
 
 
 </RelativeLayout>
