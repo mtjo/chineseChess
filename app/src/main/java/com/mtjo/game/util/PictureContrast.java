@@ -104,10 +104,7 @@ public class PictureContrast {
 
         for (int y = 0; y < pich; y++) {
             //对每一个像素的RGB值进行比较
-            //RGB值一样就加一（以便算百分比）
-
-
-            for (int x = 0; x < picw; x++) {
+             for (int x = 0; x < picw; x++) {
 
                 int index = y * picw + x;
                 int clr_one = pixels_one[index];
