@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.mtjo.game.util.Util;
 
@@ -283,6 +284,9 @@ class ChessView extends View {
 				rsData[0] = 0;
 				phase = PHASE_EXITTING;
 			}
+		}
+		if(getResult()){
+			Toast.makeText(this.context, message, Toast.LENGTH_SHORT).show();
 		}
 	}
 

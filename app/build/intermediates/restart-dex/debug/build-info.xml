@@ -4,27 +4,27 @@
     api-level="16"
     density="xhdpi"
     format="7"
-    timestamp="17332035892813"
+    timestamp="20891876359476"
     token="1128141321742956412" >
 
     <task
         name="javac"
-        duration="32" />
+        duration="90" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="6" />
+        duration="10" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
 
     <artifact
         location="/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="17332035892813" >
+    <build timestamp="20891876359476" >
         <artifact
             location="/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
