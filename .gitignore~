@@ -1,4 +1,3 @@
 /build/
 /build/*
-/app/build/*
 !build.gradle
