@@ -1,6 +1,7 @@
 package com.mtjo.game.util;
 
 import java.text.DecimalFormat;
+import java.util.Arrays;
 
 import android.R.integer;
 import android.graphics.Bitmap;
@@ -97,11 +98,6 @@ public class PictureContrast {
         bm_one.getPixels(pixels_one,0,bm_one.getWidth(),0,0,bm_one.getWidth(),bm_one.getHeight());
         bm_two.getPixels(pixels_two,0,bm_two.getWidth(),0,0,bm_two.getWidth(),bm_two.getHeight());
 
-
-        Log.i("W", "bitmapMinus: "+picw);
-        Log.i("H", "bitmapMinus: "+pich);
-        Log.i("test", "bitmapMinus: "+(picw*pich/90)%11);
-
         for (int y = 0; y < pich; y++) {
             //对每一个像素的RGB值进行比较
              for (int x = 0; x < picw; x++) {
@@ -116,41 +112,22 @@ public class PictureContrast {
 
                 if (clr_one != clr_two) {
                     pixels_minus[index] = 0xff000000 | (r << 16) | (g << 8) | b;
-                    //pixels_minus[index] = clr_one;//- clr_two;
                 } else {
                     pixels_minus[index] = clr_one - clr_two;
                 }
 
-
-                if (x % (picw/ 9) == 0 || y % (pich / 10) == 0 ) {
+                 //边框显示
+                /*if (x % (picw/ 9) == 0 || y % (pich / 10) == 0 ) {
                     pixels_minus[index] = 0xff000000 | (r << 16) | (g << 8) | b;
-                }
+                }*/
 
             }
 
         }
-
-
-
-
-        int[] pix = new int[picw * pich];
-
-        for (int y = 0; y < pich; y++)
-            for (int x = 0; x < picw; x++)
-            {
-                int index = y * picw + x;
-                int r = ((pix[index] >> 16) & 0xff)|0xff;
-                int g = ((pix[index] >> 8) & 0xff)|0xff;
-                int b =( pix[index] & 0xff)|0xff;
-                pix[index] = 0xff000000 | (r << 16) | (g << 8) | b;
-
-            }
         Bitmap newbitmap = Bitmap.createBitmap(picw, pich, Bitmap.Config.ARGB_8888);
         newbitmap.setPixels(pixels_minus, 0, picw, 0, 0, picw, pich);
 
-        //newbitmap = Bitmap.createScaledBitmap(bm_one, bm_one.getWidth(),bm_one.getHeight(), false);
         return  newbitmap;
-        //return  bm_one;
 
     }
 
@@ -172,4 +149,61 @@ public class PictureContrast {
         return Bitmap.createBitmap(bitmap, retX, retY, w, newh, null, false);
     }
 
+    public static int [][] map (Bitmap bitmap) {
+
+        //保存图片所有像素个数的数组，图片宽×高
+        int[] pixels_one = new int[bitmap.getWidth()*bitmap.getHeight()];
+        int[] pixels_minus=new int[bitmap.getWidth()*bitmap.getHeight()];
+
+        int picw=bitmap.getWidth();
+        int pich=bitmap.getHeight();
+        int onew = picw/9;
+        int oneh = pich/10;
+        int[][] map  = new int[10][9];
+        bitmap.getPixels(pixels_one,0,bitmap.getWidth(),0,0,bitmap.getWidth(),bitmap.getHeight());
+
+        for (int row = 1; row <= 10; row++) {
+            for (int column = 1; column <=9; column++) {
+                for (int y = 0; y < pich; y++) {
+                    //对每一个像素的RGB值进行比较
+                    for (int x = 0; x < picw; x++) {
+                        int index = y * picw + x;
+                        int clr_one = pixels_one[index];
+                        int r = ((pixels_minus[index] >> 16) & 0xff) | 0xff;
+                        int g = ((pixels_minus[index] >> 8) & 0xff) | 0xff;
+                        int b = (pixels_minus[index] & 0xff) | 0xff;
+                        if (rangeInDefined(x, onew*column, onew*(column+1))&&
+                                rangeInDefined(y, oneh*row, oneh*(row+1))&&
+                                        clr_one != 0) {
+                            pixels_minus[index] = 0xff000000 | (r << 16) | (g << 8) | b;
+                            map[row][column]++;
+
+
+                        }
+
+                        if (clr_one != 0) {
+                            pixels_minus[index] = 0xff000000 | (r << 16) | (g << 8) | b;
+                        } else {
+                            pixels_minus[index] = clr_one;
+                        }
+
+
+                    }
+
+                }
+
+            }
+        }
+        /*for (int a = 0 ; a<10; a++)
+        System.out.println( Arrays.toString(map[a]));
+        Bitmap newbitmap = Bitmap.createBitmap(picw, pich, Bitmap.Config.ARGB_8888);
+        newbitmap.setPixels(pixels_minus, 0, picw, 0, 0, picw, pich);*/
+
+        return  map;
+
+    }
+    public static boolean rangeInDefined(int current, int min, int max)
+    {
+        return Math.max(min, current) == Math.min(current, max);
+    }
 }

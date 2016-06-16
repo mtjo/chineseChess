@@ -1,4 +1,2 @@
-CHANGED,/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/mtjo/game/chess/ChessView$1$override.class
-CHANGED,/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/mtjo/game/util/PictureContrast$override.class
-CHANGED,/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/mtjo/game/chess/ChessView$override.class
-CHANGED,/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/mtjo/game/chess/ChessView$override.class

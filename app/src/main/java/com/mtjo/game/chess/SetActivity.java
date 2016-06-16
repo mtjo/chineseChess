@@ -15,7 +15,13 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.mtjo.game.util.PictureContrast;
+import com.mtjo.game.util.RootShellCmd;
 import com.mtjo.game.util.ScreenShot;
+
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Arrays;
 
 
 public class SetActivity extends Activity {
@@ -86,7 +92,7 @@ public class SetActivity extends Activity {
     };
 
     public void testscreen(View view) {
-        Bitmap bitmap, bitmap1 ,retbitmap ;
+        Bitmap bitmap, bitmap1 ,retbitmap ,retbitmap2;
 
         bitmap=ScreenShot.takeScreenShot(SetActivity.this);
 
@@ -104,9 +110,24 @@ public class SetActivity extends Activity {
         bitmap1=ScreenShot.takeScreenShot(SetActivity.this);
         String ret = PictureContrast.similarity(bm,bm2);
         retbitmap = PictureContrast.bitmapMinus(bm,bm2);
+        //int [][] map = PictureContrast.map(retbitmap);
         Log.i("ret", "testscreen: "+ret);
         imageView = (ImageView)findViewById(R.id.imageView);
         imageView.setImageBitmap(retbitmap);
+        /*for (int a = 0 ; a<10; a++)
+            System.out.println( Arrays.toString(map[a]));*/
+//        execShellCmd("getevent -p");
+//        execShellCmd("sendevent /dev/input/event0 1 158 1");
+//        execShellCmd("sendevent /dev/input/event0 1 158 0");
+//        execShellCmd("input keyevent 4");//home
+//        execShellCmd("input text  'helloworld!' ");
+//        execShellCmd("input tap 168 252");
+//        execShellCmd("input swipe 100 250 200 280");
+        RootShellCmd os = new RootShellCmd();
+        os.execString("input tap 168 252");
+        //os.simulateTouch(200,200);
+        //os.execString("input swipe 100 250 200 280");
+        //os.simulateKey(4);
 
     }
 
@@ -132,5 +153,23 @@ public class SetActivity extends Activity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    private void execShellCmd(String cmd) {
+
+        try {
+            // 申请获取root权限，这一步很重要，不然会没有作用
+            Process process = Runtime.getRuntime().exec("su");
+            // 获取输出流
+            OutputStream outputStream = process.getOutputStream();
+            DataOutputStream dataOutputStream = new DataOutputStream(
+                    outputStream);
+            dataOutputStream.writeBytes(cmd);
+            dataOutputStream.flush();
+            dataOutputStream.close();
+            outputStream.close();
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
     }
 }

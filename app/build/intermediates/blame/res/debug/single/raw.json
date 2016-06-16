@@ -1,14 +1,14 @@
 [
     {
-        "merged": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/res/merged/debug/raw/hit_right.wav",
-        "source": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/src/main/res/raw/hit_right.wav"
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/raw/hit_right.wav",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/raw/hit_right.wav"
     },
     {
-        "merged": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/res/merged/debug/raw/menu.ogg",
-        "source": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/src/main/res/raw/menu.ogg"
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/raw/menu.ogg",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/raw/menu.ogg"
     },
     {
-        "merged": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/intermediates/res/merged/debug/raw/game_bg.wav",
-        "source": "/Users/mtjo/AndroidStudioProjects/chineseChess/app/src/main/res/raw/game_bg.wav"
+        "merged": "/home/mtjo/wbiao_android/chineseChess/app/build/intermediates/res/merged/debug/raw/game_bg.wav",
+        "source": "/home/mtjo/wbiao_android/chineseChess/app/src/main/res/raw/game_bg.wav"
     }
 ]

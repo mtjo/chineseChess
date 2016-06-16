@@ -5,10 +5,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.os.SystemClock;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.mtjo.game.util.RootShellCmd;
 import com.mtjo.game.util.Util;
 
 class ChessView extends View {
@@ -285,6 +287,8 @@ class ChessView extends View {
 				phase = PHASE_EXITTING;
 			}
 		}
+		RootShellCmd os = new RootShellCmd();
+		os.execString("input tap 700 1270");
 		if(getResult()){
 			Toast.makeText(this.context, message, Toast.LENGTH_SHORT).show();
 		}
@@ -400,4 +404,5 @@ class ChessView extends View {
 	void about() {
 		phase = PHASE_LOADING;
 	}
+
 }

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="16"
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
     density="xhdpi"
     format="7"
-    timestamp="20891876359476"
-    token="1128141321742956412" >
+    timestamp="33033908897711"
+    token="-8171826594801078470" >
 
     <task
         name="javac"
-        duration="90" />
+        duration="171" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="10" />
+        duration="9" />
     <task
         name="verifier"
         duration="1" />
 
     <artifact
-        location="/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/outputs/apk/app-debug.apk"
+        location="/home/mtjo/wbiao_android/chineseChess/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="20891876359476" >
+    <build timestamp="33033908897711" >
         <artifact
-            location="/Users/mtjo/AndroidStudioProjects/chineseChess/app/build/outputs/apk/app-debug.apk"
+            location="/home/mtjo/wbiao_android/chineseChess/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
 
