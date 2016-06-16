@@ -287,8 +287,8 @@ class ChessView extends View {
 				phase = PHASE_EXITTING;
 			}
 		}
-		RootShellCmd os = new RootShellCmd();
-		os.execString("input tap 700 1270");
+		/*RootShellCmd os = new RootShellCmd();
+		os.execString("input tap 700 1270");*/
 		if(getResult()){
 			Toast.makeText(this.context, message, Toast.LENGTH_SHORT).show();
 		}
