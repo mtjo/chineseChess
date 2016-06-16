@@ -14,6 +14,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.mtjo.game.service.GameService;
 import com.mtjo.game.util.PictureContrast;
 import com.mtjo.game.util.RootShellCmd;
 import com.mtjo.game.util.ScreenShot;
@@ -171,5 +172,15 @@ public class SetActivity extends Activity {
         } catch (Throwable t) {
             t.printStackTrace();
         }
+    }
+    public void startService (View view) {
+        Intent startIntent = new Intent(this, GameService.class);
+        startService(startIntent);
+
+    }
+    public void stopService (View view) {
+        Intent stopIntent = new Intent(this, GameService.class);
+        stopService(stopIntent);
+
     }
 }
