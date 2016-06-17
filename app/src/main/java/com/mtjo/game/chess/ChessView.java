@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -253,6 +254,7 @@ class ChessView extends View {
 		if (event.getAction()==MotionEvent.ACTION_DOWN) {
 
 			pointerPressed(event.getX(), event.getY());
+			Log.i("xy", "onTouchEvent: "+event.getX()+"_"+event.getY());
 		}
 		return super.onTouchEvent(event);
 	}
@@ -264,6 +266,10 @@ class ChessView extends View {
 		}
 		cursorX = Util.MIN_MAX(0, ((int) x - left) / squareSize, 8);
 		cursorY = Util.MIN_MAX(0, ((int) y - top) / squareSize, 9);
+		Log.i("", "pointerPressed: X:"+x);
+		Log.i("", "pointerPressed: Y:"+y);
+		Log.i("", "pointerPressed: cursorX:"+cursorX);
+		Log.i("", "pointerPressed: cursorY:"+cursorY);
 		clickSquare();
 		invalidate();
 

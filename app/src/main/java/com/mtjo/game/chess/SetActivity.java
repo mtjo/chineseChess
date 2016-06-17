@@ -108,18 +108,17 @@ public class SetActivity extends Activity {
         ImageView imageView;
 
 
-        os.execString("input tap 168 252");
+
 
         /*try {
             Thread.currentThread().sleep(2000);//阻断2秒
         } catch (InterruptedException e) {
             e.printStackTrace();
         }*/
-        bitmap1=ScreenShot.takeScreenShot(SetActivity.this);
-        String ret = PictureContrast.similarity(bm,bm2);
+        //bitmap1=ScreenShot.takeScreenShot(SetActivity.this);
+        //String ret = PictureContrast.similarity(bm,bm2);
         retbitmap = PictureContrast.bitmapMinus(bm,bm2);
         //int [][] map = PictureContrast.map(retbitmap);
-        Log.i("ret", "testscreen: "+ret);
         imageView = (ImageView)findViewById(R.id.imageView);
         imageView.setImageBitmap(retbitmap);
         /*for (int a = 0 ; a<10; a++)
@@ -132,7 +131,7 @@ public class SetActivity extends Activity {
 //        execShellCmd("input tap 168 252");
 //        execShellCmd("input swipe 100 250 200 280");
 
-        os.execString("input tap 168 252");
+        //os.execString("input tap 168 252");
         //os.simulateTouch(200,200);
         //os.execString("input swipe 100 250 200 280");
         //os.simulateKey(4);

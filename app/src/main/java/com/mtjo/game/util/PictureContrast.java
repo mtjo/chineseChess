@@ -26,7 +26,7 @@ public class PictureContrast {
     private static int t = 0;
     private static int f = 0;
     private Bitmap last_bamp;
-    public static String similarity (Bitmap bm_one,Bitmap bm_two) {
+    public static double similarity (Bitmap bm_one,Bitmap bm_two) {
         //保存图片所有像素个数的数组，图片宽×高
         int[] pixels_one = new int[bm_one.getWidth()*bm_one.getHeight()];
         int[] pixels_two = new int[bm_two.getWidth()*bm_two.getHeight()];
@@ -59,7 +59,7 @@ public class PictureContrast {
 
         }
 
-        return "相似度为："+myPercent(t,t+f);
+        return myPercent(t,t+f);
 
     }
     /**
@@ -69,7 +69,7 @@ public class PictureContrast {
      * @param z（分子）
      * @return 百分比（保留小数点后两位）
      */
-    public static String myPercent(int y,int z)
+    public static double myPercent(int y,int z)
     {
         String baifenbi="";//接受百分比的值
         double baiy=y*1.0;
@@ -77,10 +77,11 @@ public class PictureContrast {
         double fen=baiy/baiz;
         DecimalFormat df1 = new DecimalFormat("00.00%"); //##.00%   百分比格式，后面不足2位的用0补齐
         baifenbi= df1.format(fen);
-        return baifenbi;
+        double semblance = baiy/baiz;
+        return semblance;
     }
 
-
+    //图片相减
     public static Bitmap bitmapMinus (Bitmap bm_one,Bitmap bm_two) {
 
         //保存图片所有像素个数的数组，图片宽×高
@@ -97,6 +98,7 @@ public class PictureContrast {
         int pich=bm_one.getHeight();
         bm_one.getPixels(pixels_one,0,bm_one.getWidth(),0,0,bm_one.getWidth(),bm_one.getHeight());
         bm_two.getPixels(pixels_two,0,bm_two.getWidth(),0,0,bm_two.getWidth(),bm_two.getHeight());
+        int[][] map  = new int[10][9];
 
         for (int y = 0; y < pich; y++) {
             //对每一个像素的RGB值进行比较
@@ -133,7 +135,7 @@ public class PictureContrast {
 
     /**
      * 裁剪棋盘大小
-     *
+     *MTJO
      * */
     public static Bitmap ImageCrop(Bitmap bitmap) {
         int w = bitmap.getWidth(); // 得到图片的宽，高

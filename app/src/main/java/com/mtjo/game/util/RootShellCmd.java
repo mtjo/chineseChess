@@ -1,6 +1,12 @@
 package com.mtjo.game.util;
 
+import android.util.Log;
+
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 
 /**
@@ -8,6 +14,7 @@ import java.io.OutputStream;
  */
 public class RootShellCmd {
     private OutputStream os;
+    private String TAG = "RootShellCmd";
 
     /**
      * 执行shell指令 * * @param cmd * 指令
@@ -41,11 +48,13 @@ public class RootShellCmd {
         exec("sendevent /dev/input/event0 0 0 0\n");
         exec("sendevent /dev/input/event0 1 330 0\n");
         exec("sendevent /dev/input/event0 0 0 0\n");
-
         exec("sendevent /dev/input/event0 \n");
     }
-    public final void execString(String string) {
-        exec(string+"\n");
+    public final void execString(String cmd) {
+        Log.d(TAG, "execString: ");
+        exec(cmd+"\n");
     }
 
 }
+
+
