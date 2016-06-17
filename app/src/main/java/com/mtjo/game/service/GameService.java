@@ -20,6 +20,7 @@ import java.util.TimerTask;
 
 public class GameService extends Service {
     public static final String TAG = "GameService";
+    public int screen = 0;
     public RootShellCmd os = new RootShellCmd();
 
 
@@ -28,7 +29,8 @@ public class GameService extends Service {
             super.handleMessage(msg);
             if(msg.what == 1){
                 //todo something....
-
+                String screenshot = "shell screencap -p /sdcard/screenshot"+screen+".png";
+                screen++;
                 Bitmap bitmap, bitmap1 ,retbitmap ,retbitmap2;
                 Bitmap bm = BitmapFactory.decodeFile("/sdcard/2.png");
                 Bitmap bm2 = BitmapFactory.decodeFile("/sdcard/1.png");
@@ -42,8 +44,9 @@ public class GameService extends Service {
                 Log.i("ret", "testscreen: "+ret);
 
                 RootShellCmd os = new RootShellCmd();
-                os.execString("input tap 168 100");
-                os.execString("input tap 200 400");
+                os.execString(screenshot);
+                //os.execString("input tap 168 100");
+                //os.execString("input tap 200 400");
             }
         }
     };

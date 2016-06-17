@@ -32,6 +32,7 @@ public class SetActivity extends Activity {
     public RadioGroup player,level;
     public RadioButton red, black, both, beginner, amateur, expert;
     public byte[] config = new byte[ChessGame.RS_DATA_LEN];
+    public RootShellCmd os = new RootShellCmd();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +107,9 @@ public class SetActivity extends Activity {
 
         ImageView imageView;
 
+
+        os.execString("input tap 168 252");
+
         /*try {
             Thread.currentThread().sleep(2000);//阻断2秒
         } catch (InterruptedException e) {
@@ -127,7 +131,7 @@ public class SetActivity extends Activity {
 //        execShellCmd("input text  'helloworld!' ");
 //        execShellCmd("input tap 168 252");
 //        execShellCmd("input swipe 100 250 200 280");
-        RootShellCmd os = new RootShellCmd();
+
         os.execString("input tap 168 252");
         //os.simulateTouch(200,200);
         //os.execString("input swipe 100 250 200 280");
@@ -157,24 +161,6 @@ public class SetActivity extends Activity {
             return true;
         }
         return super.onKeyDown(keyCode, event);
-    }
-
-    private void execShellCmd(String cmd) {
-
-        try {
-            // 申请获取root权限，这一步很重要，不然会没有作用
-            Process process = Runtime.getRuntime().exec("su");
-            // 获取输出流
-            OutputStream outputStream = process.getOutputStream();
-            DataOutputStream dataOutputStream = new DataOutputStream(
-                    outputStream);
-            dataOutputStream.writeBytes(cmd);
-            dataOutputStream.flush();
-            dataOutputStream.close();
-            outputStream.close();
-        } catch (Throwable t) {
-            t.printStackTrace();
-        }
     }
     public void startService (View view) {
         Intent startIntent = new Intent(this, GameService.class);
