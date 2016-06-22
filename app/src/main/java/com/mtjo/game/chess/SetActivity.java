@@ -4,9 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -14,18 +13,14 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
 import com.mtjo.game.service.GameService;
-import com.mtjo.game.util.PictureContrast;
 import com.mtjo.game.util.RootShellCmd;
-import com.mtjo.game.util.ScreenShot;
+import com.mtjo.game.util.ScreenShotFb;
 
-import java.io.DataOutputStream;
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.util.Arrays;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 public class SetActivity extends Activity {
@@ -33,6 +28,10 @@ public class SetActivity extends Activity {
     public RadioButton red, black, both, beginner, amateur, expert;
     public byte[] config = new byte[ChessGame.RS_DATA_LEN];
     public RootShellCmd os = new RootShellCmd();
+    private static final String TAG="SetActivity";
+    final static String FB0FILE1 = "/dev/graphics/fb0";
+    static File fbFile;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,42 +98,12 @@ public class SetActivity extends Activity {
     public void testscreen(View view) {
         Bitmap bitmap, bitmap1 ,retbitmap ,retbitmap2;
 
-        bitmap=ScreenShot.takeScreenShot(SetActivity.this);
+        ImageView imageView = (ImageView)findViewById(R.id.imageView);
 
+        bitmap=ScreenShotFb.shootBitmap();
 
-        Bitmap bm = BitmapFactory.decodeFile("/sdcard/2.png");
-        Bitmap bm2 = BitmapFactory.decodeFile("/sdcard/1.png");
+        imageView.setImageBitmap(bitmap);
 
-        ImageView imageView;
-
-
-
-
-        /*try {
-            Thread.currentThread().sleep(2000);//阻断2秒
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
-        //bitmap1=ScreenShot.takeScreenShot(SetActivity.this);
-        //String ret = PictureContrast.similarity(bm,bm2);
-        retbitmap = PictureContrast.bitmapMinus(bm,bm2);
-        //int [][] map = PictureContrast.map(retbitmap);
-        imageView = (ImageView)findViewById(R.id.imageView);
-        imageView.setImageBitmap(retbitmap);
-        /*for (int a = 0 ; a<10; a++)
-            System.out.println( Arrays.toString(map[a]));*/
-//        execShellCmd("getevent -p");
-//        execShellCmd("sendevent /dev/input/event0 1 158 1");
-//        execShellCmd("sendevent /dev/input/event0 1 158 0");
-//        execShellCmd("input keyevent 4");//home
-//        execShellCmd("input text  'helloworld!' ");
-//        execShellCmd("input tap 168 252");
-//        execShellCmd("input swipe 100 250 200 280");
-
-        //os.execString("input tap 168 252");
-        //os.simulateTouch(200,200);
-        //os.execString("input swipe 100 250 200 280");
-        //os.simulateKey(4);
 
     }
 

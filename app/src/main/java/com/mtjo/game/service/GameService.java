@@ -38,35 +38,42 @@ public class GameService extends Service {
                 os.execString(screenshot);
                 Log.i(TAG, "handleMessage:shell run " + screenshot);
                 try {
-                    Thread.currentThread().sleep(2000);//阻断
+                    //Thread.sleep(2000);
+                    Thread.currentThread().sleep(5000);//阻断
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
 
                 if (screen >= 1) {
-                    semblance = 0.0;
-                    Bitmap bm = BitmapFactory.decodeFile(filePath+fileName + screen + ".png");
-                    Bitmap bm2 = BitmapFactory.decodeFile(filePath+fileName + (screen - 1) + ".png");
-                    Bitmap bitmapMinus = PictureContrast.bitmapMinus(bm, bm2);
+                    try{
+                        semblance = 0.0;
+                        Bitmap bm = BitmapFactory.decodeFile(filePath+fileName + screen + ".png");
+                        Bitmap bm2 = BitmapFactory.decodeFile(filePath+fileName + (screen - 1) + ".png");
+                        Bitmap bitmapMinus = PictureContrast.bitmapMinus(bm, bm2);
+                        Log.e(TAG, "保存图片");
+                        File f = new File("/sdcard/", screen + "_" + screen + ".png");
+                        if (f.exists()) {
+                            f.delete();
+                        }
+                        try {
+                            FileOutputStream out = new FileOutputStream(f);
+                            bitmapMinus.compress(Bitmap.CompressFormat.PNG, 90, out);
+                            out.flush();
+                            out.close();
+                            Log.i(TAG, "已经保存");
+                        } catch (FileNotFoundException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                    }catch (Exception e) {
+                        Log.i(TAG, "handleMessage: "+e);
+                    }
 
-                    Log.e(TAG, "保存图片");
-                    File f = new File("/sdcard/", screen + "_" + screen + ".png");
-                    if (f.exists()) {
-                        f.delete();
-                    }
-                    try {
-                        FileOutputStream out = new FileOutputStream(f);
-                        bitmapMinus.compress(Bitmap.CompressFormat.PNG, 90, out);
-                        out.flush();
-                        out.close();
-                        Log.i(TAG, "已经保存");
-                    } catch (FileNotFoundException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
+
+
                 }
                 screen++;
             }
