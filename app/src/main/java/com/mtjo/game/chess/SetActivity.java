@@ -3,8 +3,6 @@ package com.mtjo.game.chess;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -15,12 +13,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 import com.mtjo.game.service.GameService;
 import com.mtjo.game.util.RootShellCmd;
-import com.mtjo.game.util.ScreenShotFb;
 
-import java.io.DataInputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 
 
 public class SetActivity extends Activity {
@@ -96,13 +90,16 @@ public class SetActivity extends Activity {
     };
 
     public void testscreen(View view) {
-        Bitmap bitmap, bitmap1 ,retbitmap ,retbitmap2;
+        /*Bitmap bitmap, bitmap1 ,retbitmap ,retbitmap2;
 
         ImageView imageView = (ImageView)findViewById(R.id.imageView);
 
         bitmap=ScreenShotFb.shootBitmap();
 
-        imageView.setImageBitmap(bitmap);
+        imageView.setImageBitmap(bitmap);*/
+        Intent intent = new Intent();
+        intent.setClass(SetActivity.this,myListActivity.class);
+        startActivity(intent);
 
 
     }
