@@ -21,7 +21,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 */
 package com.mtjo.game.chess;
 
+import android.util.Log;
+
 import com.mtjo.game.util.Util;
+
+import java.util.Arrays;
 
 class HashItem {
 	byte depth, flag;

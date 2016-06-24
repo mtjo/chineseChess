@@ -14,7 +14,10 @@ import android.widget.Toast;
 import com.mtjo.game.util.RootShellCmd;
 import com.mtjo.game.util.Util;
 
+import java.util.Arrays;
+
 class ChessView extends View {
+	private static String TAG = "ChessView";
 
 	private static final int PHASE_LOADING = 0;
 	private static final int PHASE_WAITING = 1;
@@ -91,6 +94,8 @@ class ChessView extends View {
 		this.rsData = rsData;
 		cursorX = cursorY = 7;
 		sqSelected = mvLast = 0;
+
+		System.out.println(Arrays.toString(rsData));
 
 		if (rsData[0] == 0) {
 			pos.fromFen(Position.STARTUP_FEN[handicap]);
@@ -260,10 +265,10 @@ class ChessView extends View {
 	}
 
 	protected void pointerPressed(float x, float y) {
-
 		if (phase == PHASE_THINKING) {
 			return;
 		}
+
 		cursorX = Util.MIN_MAX(0, ((int) x - left) / squareSize, 8);
 		cursorY = Util.MIN_MAX(0, ((int) y - top) / squareSize, 9);
 		Log.i("", "pointerPressed: X:"+x);
@@ -278,6 +283,7 @@ class ChessView extends View {
 	private void clickSquare() {
 		int sq = Position.COORD_XY(cursorX + Position.FILE_LEFT, cursorY
 				+ Position.RANK_TOP);
+		Log.i(TAG, "clickSquare:sq: "+sq);
 		if (moveMode == COMPUTER_RED) {
 			sq = Position.SQUARE_FLIP(sq);
 		}
